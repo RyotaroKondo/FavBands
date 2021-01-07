@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Schema;
 use Psy\Shell;
 
 class AppServiceProvider extends ServiceProvider
