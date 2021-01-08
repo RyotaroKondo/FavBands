@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">バンド名</div>
-                    <img src="{{asset('images')}}/{{$band->image}}" class="img-responsibe" width="250">
+                <div class="card-header">バンド</div>
+                    <img src="{{asset('band_images')}}/{{$band->image}}" class="img-responsibe" width="250">
                 <div class="card-body">
    
                 </div>

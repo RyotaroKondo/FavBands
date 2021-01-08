@@ -16,7 +16,7 @@ class BandController extends Controller
     public function index()
     {
         //
-        $bands = Band::latest()->paginate(10);
+        $bands = Band::latest()->paginate(5);
         return view('band.index', compact('bands'));
     }
 
@@ -132,10 +132,6 @@ class BandController extends Controller
         //
         $band = Band::find($id);
         $band->delete();
-        // $image = $request->file('image');
-        // $name = time().'.'.$image->getClientOriginalExtension();
-        // $destinationPath = public_path('/band_images');
-        // $image->delete($destinationPath, $band->image);
         return redirect()->route('band.index')->with('message', 'バンドを削除しました。');
     }
     
