@@ -12,12 +12,12 @@
             <form action="{{route('category.store')}}" method="post">
                 @csrf
             <div class="card">
-                <div class="card-header">Band Category</div>
+                <div class="card-header">バンドカテゴリー</div>
 
                 <div class="card-body">
                    
                     <div class="form-body">
-                        <label for="name">Name</label>
+                        <label for="name">カテゴリー名</label>
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror">
 
                         @error('name')
