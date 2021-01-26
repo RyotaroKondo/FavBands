@@ -46,6 +46,14 @@
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Authentication Links -->
+                        @if(Auth::check())
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('category.index') }}">{{ __('Category') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('band.index') }}">{{ __('Band') }}</a>
+                            </li>
+                        @endif
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
