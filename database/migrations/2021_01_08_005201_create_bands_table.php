@@ -13,15 +13,17 @@ class CreateBandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bands', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description');
-            $table->string('url');
-            $table->string('image');
-            $table->integer('category_id');
-            $table->timestamps();
-        });
+        if (Schema::hasTable('bands')) {
+            Schema::create('bands', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->text('description');
+                $table->string('url');
+                $table->string('image');
+                $table->integer('category_id');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
