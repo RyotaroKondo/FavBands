@@ -106,6 +106,9 @@ class BandController extends Controller
         $name = $band->image;
 
         if($request->hasFile('image')){
+            $deleteImage = $band->image;
+            $path = public_path('/band_images').'/'.$deleteImage;
+            \File::delete($path);
             $image = $request->file('image');
             $name = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('/band_images');
@@ -131,6 +134,9 @@ class BandController extends Controller
     {
         //
         $band = Band::find($id);
+        $deleteImage = $band->image;
+        $path = public_path('/band_images').'/'.$deleteImage;
+        \File::delete($path);
         $band->delete();
         return redirect()->route('band.index')->with('message', 'バンドを削除しました。');
     }
