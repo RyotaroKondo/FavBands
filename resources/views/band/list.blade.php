@@ -10,7 +10,7 @@
                 <div class="row">
                     @foreach(App\Models\Band::where('category_id', $category->id)->get() as $band)
                     <div class="col-md-3">
-                        <img src="{{asset('band_images')}}/{{$band->image}}" width="200" height="155">
+                        <img src="{{asset('band_images')}}/{{$band->image}}" width="240" height="155">
                         <p class="text-center">{{$band->name}}</p>
                         <p class="text-center">
                             <a href="{{route('band.view', [$band->id])}}">
