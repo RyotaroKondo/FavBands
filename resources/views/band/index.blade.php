@@ -11,11 +11,6 @@
         @endif
             <div class="card">
                 <div class="card-header">バンド全一覧</div>
-                    <!-- <span class="float-right">
-                        <a href="{{route('band.create')}}">
-                            <button class="btn btn-outline-secondary">バンドを追加する</button>
-                        </a>
-                    </span> -->
                 <div class="card-body">
                 <table class="table">
                     <thead class="thead-dark">
@@ -44,12 +39,9 @@
                             </a>
                         </td>
                         <td>
-                         
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$band->id}}">
                                 削除
                                 </button>
-                               
-                       
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal{{$band->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
